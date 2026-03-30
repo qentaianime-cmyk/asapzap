@@ -1,0 +1,15 @@
+import { Navbar } from "@/components/custom/navbar"
+
+export default function AppLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      data-slot="layout"
+      className="bg-background relative z-10 flex min-h-svh flex-col"
+    >
+      <Navbar />
+      <main className="flex flex-1 flex-col items-center justify-center">
+        {children}
+      </main>
+    </div>
+  )
+}
